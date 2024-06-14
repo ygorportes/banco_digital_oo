@@ -4,13 +4,15 @@ public class Main {
         Cliente cliente = new Cliente();
         cliente.setNome("Cliente 1");
 
-        Conta cc = new ContaCorrente(cliente);
+        ContaCorrente cc = new ContaCorrente(cliente);
         cc.depositar(100);
 
-        Conta poupanca = new ContaPoupanca(cliente);
+        ContaPoupanca poupanca = new ContaPoupanca(cliente);
         cc.transferir(50, poupanca);
 
         cc.imprimirExtrato();
         poupanca.imprimirExtrato();
+
+        System.out.println();
     }
 }
